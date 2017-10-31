@@ -127,6 +127,6 @@ public class Square {
 
 
     public int hashCode() {
-        return super.hashCode();
+        return file + rank + 'A' + name.hashCode();
     }
 }

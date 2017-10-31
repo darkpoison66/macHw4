@@ -2,6 +2,7 @@ import java.util.Set;
 import java.util.Iterator;
 import java.util.Collection;
 import java.util.NoSuchElementException;
+import java.util.Arrays;
 
 
 
@@ -23,7 +24,7 @@ public class SquareSet<Square> implements Set<Square> {
      * Creates a SquareSet with an Object array as a backing store.
      */
     public SquareSet() {
-        bArray = ((Square[])new Object[10]);
+        bArray = (Square[])new Object[10];
         numOfElements = 0;
     }
 
@@ -56,7 +57,7 @@ public class SquareSet<Square> implements Set<Square> {
         }
 
         if (numOfElements == bArray.length) {
-            Object[] copy = new Object[bArray.length * 3];
+            Square[] copy = (Square[])new Object[bArray.length * 3];
             for (int x = 0; x < bArray.length; x++) {
                 copy[x] = bArray[x];
             }
@@ -80,6 +81,9 @@ public class SquareSet<Square> implements Set<Square> {
      */
     public boolean addAll(Collection<? extends Square> c) {
         for (Square x: c) {
+            if (x == null) {
+                throw new NullPointerException();
+            }
             if (x.toString().length() !=  2) {
                 throw new InvalidSquareException(x.toString());
             }
@@ -131,6 +135,9 @@ public class SquareSet<Square> implements Set<Square> {
      * @param o element whose presence in this set is to be tested
      */
     public boolean contains(Object o) {
+        if (o == null) {
+            return false;
+        }
         for (Square x: bArray) {
             if (o != null && o.equals(x)) {
                 return true;
@@ -264,24 +271,38 @@ public class SquareSet<Square> implements Set<Square> {
 
             }
        }*/
+        System.out.println(Arrays.toString(bArray));
         boolean found = false;
-
-        for (int i = 0; i < bArray.length; i++) {
-            if (o.equals(bArray[i])) {
+        for (int x = 0; x < numOfElements; x++) {
+            if (bArray[x] != null && bArray[x].equals(o)) {
                 found = true;
-                int a = i;
-                numOfElements--;
-                Object[] copy = new Object[numOfElements];
-                for (int x = 0; x < numOfElements; x++) {
-                    if (!(x == a)) {
-                        copy[x] = bArray[x];
-                    }
-                }
-                bArray = (Square[]) copy;
-                return true;
             }
         }
-        return false;
+        if (found) {
+            Object[] copy = new Object[numOfElements];
+            for (int i = 0; i < numOfElements; i++) {
+                if (!(bArray[i].equals(o)) && bArray[i] != null) {
+                    copy[i] = bArray[i];
+                }
+            }
+            System.out.println(Arrays.toString(copy));
+            Object[] copy2 = new Object[numOfElements - 1];
+            for (int j = 0, y = 0; j < numOfElements; j++) {
+                if (copy[j] != null) {
+                   // System.out.print(copy[j] + " ");
+                    copy2[y++] = copy[j];
+                    //System.out.print("   " + copy2[j] + "  ");
+                }
+            }
+            numOfElements--;
+            System.out.println();
+            System.out.println(Arrays.toString(copy2));
+            bArray = (Square[]) copy2;
+            //System.out.println(Arrays.toString(bArray));
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**
@@ -290,7 +311,7 @@ public class SquareSet<Square> implements Set<Square> {
     public String toString() {
       String result = "";
 
-      for (int index=0; index < numOfElements; index++) {
+      for (int index = 0; index < bArray.length; index++) {
           if (bArray[index] != null) {
               result = result + bArray[index].toString() + "\n";
           }
