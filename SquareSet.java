@@ -2,7 +2,8 @@ import java.util.Set;
 import java.util.Iterator;
 import java.util.Collection;
 import java.util.NoSuchElementException;
-import java.util.Arrays;
+
+
 
 
 
@@ -11,7 +12,7 @@ import java.util.Arrays;
  *
  * @version 1.0
  * @author mabdi3
- * @see Square
+ * @param <Square> a square on a chess board
  */
 
 public class SquareSet<Square> implements Set<Square> {
@@ -24,7 +25,7 @@ public class SquareSet<Square> implements Set<Square> {
      * Creates a SquareSet with an Object array as a backing store.
      */
     public SquareSet() {
-        bArray = (Square[])new Object[10];
+        bArray = (Square[]) new Object[10];
         numOfElements = 0;
     }
 
@@ -57,7 +58,7 @@ public class SquareSet<Square> implements Set<Square> {
         }
 
         if (numOfElements == bArray.length) {
-            Square[] copy = (Square[])new Object[bArray.length * 3];
+            Square[] copy = (Square[]) new Object[bArray.length * 3];
             for (int x = 0; x < bArray.length; x++) {
                 copy[x] = bArray[x];
             }
@@ -228,7 +229,7 @@ public class SquareSet<Square> implements Set<Square> {
      * @return array containing all of the elements in this set;
      * the runtime type of the returned array is that of the specified array
      * @param a the array into wich the elements of this set are to be stored
-     * @param <Square> runtime type of the array to contain the collection
+     * @param <T> runtime type of the array to contain the collection
      */
     public <T> T[] toArray(T[] a) {
         if (a.length < numOfElements) {
@@ -241,7 +242,7 @@ public class SquareSet<Square> implements Set<Square> {
             for (int x = 0; x < numOfElements; x++) {
                 a[x] = ((T) bArray[x]);
             }
-            if(a.length > numOfElements) {
+            if (a.length > numOfElements) {
                 a[numOfElements] = null;
             }
             return a;
@@ -309,47 +310,37 @@ public class SquareSet<Square> implements Set<Square> {
      * @return string representation of the set
      */
     public String toString() {
-      String result = "";
+        String result = "";
 
-      for (int index = 0; index < bArray.length; index++) {
-          if (bArray[index] != null) {
-              result = result + bArray[index].toString() + "\n";
-          }
-      }
+        for (int index = 0; index < bArray.length; index++) {
+            if (bArray[index] != null) {
+                result = result + bArray[index].toString() + "\n";
+            }
+        }
 
-      return result;
+        return result;
     }
 
     /**
      * @return iterator over the elements in this set
      * @see SquareIterator
      */
-     public Iterator<Square> iterator() {
+    public Iterator<Square> iterator() {
         return new SquareIterator();
-     }
+    }
 
 
-    /**
-     * @throws UnsupportedOperationExcetion
-     */
+    @Override
     public void clear() {
-        throw new UnsupportedOperationException();
+
     }
-    /**
-     * @throws UnsupportedOperationExcetion
-     * @param c collection to be removed
-     * @return an UnsupportedOperationException
-     */
+    @Override
     public boolean removeAll(Collection<?> c) {
-        throw new UnsupportedOperationException();
+
     }
-    /**
-     * @throws UnsupportedOperationExcetion
-     * @param c collection to be removed
-     * @return an UnsupportedOperationException
-     */
+    @Override
     public boolean retainAll(Collection<?> c) {
-        throw new UnsupportedOperationException();
+
     }
     /**
      * Represents an iterator over a Square collection.

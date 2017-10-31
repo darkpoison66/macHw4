@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80f7f6e1-5bf5-42f3-b4e3-37c21d987dd1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SquareSet.class" afterPath="$PROJECT_DIR$/SquareSet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tester.class" afterPath="$PROJECT_DIR$/Tester.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testerh.class" afterPath="$PROJECT_DIR$/Testerh.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SquareSet.java" afterPath="$PROJECT_DIR$/SquareSet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tester.java" afterPath="$PROJECT_DIR$/Tester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testerh.java" afterPath="$PROJECT_DIR$/Testerh.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,19 +17,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SquareSet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SquareSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SquareSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2070">
-              <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
+            <state relative-caret-position="19">
+              <caret line="332" column="13" lean-forward="false" selection-start-line="332" selection-start-column="13" selection-end-line="332" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5047#5048#0" expanded="true" />
-                <element signature="e#5083#5084#0" expanded="true" />
-                <element signature="e#9248#9249#0" expanded="true" />
-                <element signature="e#9292#9293#0" expanded="true" />
-                <element signature="e#10275#10276#0" expanded="true" />
-                <element signature="e#10309#10310#0" expanded="true" />
+                <element signature="e#5056#5057#0" expanded="true" />
+                <element signature="e#5092#5093#0" expanded="true" />
+                <element signature="e#9266#9267#0" expanded="true" />
+                <element signature="e#9309#9310#0" expanded="true" />
+                <element signature="e#9826#9827#0" expanded="true" />
+                <element signature="e#9860#9861#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,8 +38,8 @@
       <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="72" column="10" lean-forward="false" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+            <state relative-caret-position="207">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,7 +63,7 @@
       <file leaf-file-name="Square.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Square.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
+            <state relative-caret-position="1935">
               <caret line="129" column="32" lean-forward="false" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
               <folding>
                 <element signature="e#882#883#0" expanded="true" />
@@ -82,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Testerh.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Testerh.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Testerh.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="559" column="37" lean-forward="true" selection-start-line="559" selection-start-column="37" selection-end-line="559" selection-end-column="37" />
+            <state relative-caret-position="255">
+              <caret line="385" column="6" lean-forward="true" selection-start-line="385" selection-start-column="6" selection-end-line="385" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,9 +123,9 @@
         <option value="$PROJECT_DIR$/Tester1.1.java" />
         <option value="$PROJECT_DIR$/Range.java" />
         <option value="$PROJECT_DIR$/Square.java" />
+        <option value="$PROJECT_DIR$/Testerh.java" />
         <option value="$PROJECT_DIR$/Tester.java" />
         <option value="$PROJECT_DIR$/SquareSet.java" />
-        <option value="$PROJECT_DIR$/Testerh.java" />
       </list>
     </option>
   </component>
@@ -373,33 +370,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SquareSet.java">
+    <entry file="file://$PROJECT_DIR$/Testerh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="385" column="6" lean-forward="true" selection-start-line="385" selection-start-column="6" selection-end-line="385" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5047#5048#0" expanded="true" />
-            <element signature="e#5083#5084#0" expanded="true" />
-            <element signature="e#9248#9249#0" expanded="true" />
-            <element signature="e#9292#9293#0" expanded="true" />
-            <element signature="e#10275#10276#0" expanded="true" />
-            <element signature="e#10309#10310#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="72" column="10" lean-forward="false" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        <state relative-caret-position="207">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
+        <state relative-caret-position="1935">
           <caret line="129" column="32" lean-forward="false" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
           <folding>
             <element signature="e#882#883#0" expanded="true" />
@@ -414,12 +405,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testerh.java">
+    <entry file="file://$PROJECT_DIR$/SquareSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="559" column="37" lean-forward="true" selection-start-line="559" selection-start-column="37" selection-end-line="559" selection-end-column="37" />
+        <state relative-caret-position="19">
+          <caret line="332" column="13" lean-forward="false" selection-start-line="332" selection-start-column="13" selection-end-line="332" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#5056#5057#0" expanded="true" />
+            <element signature="e#5092#5093#0" expanded="true" />
+            <element signature="e#9266#9267#0" expanded="true" />
+            <element signature="e#9309#9310#0" expanded="true" />
+            <element signature="e#9826#9827#0" expanded="true" />
+            <element signature="e#9860#9861#0" expanded="true" />
           </folding>
         </state>
       </provider>
