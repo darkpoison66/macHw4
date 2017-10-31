@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80f7f6e1-5bf5-42f3-b4e3-37c21d987dd1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Square.class" afterPath="$PROJECT_DIR$/Square.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SquareSet$SquareIterator.class" afterPath="$PROJECT_DIR$/SquareSet$SquareIterator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SquareSet.class" afterPath="$PROJECT_DIR$/SquareSet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tester.class" afterPath="$PROJECT_DIR$/Tester.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Square.java" afterPath="$PROJECT_DIR$/Square.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SquareSet.java" afterPath="$PROJECT_DIR$/SquareSet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tester.java" afterPath="$PROJECT_DIR$/Tester.java" />
     </list>
@@ -24,16 +21,16 @@
       <file leaf-file-name="SquareSet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SquareSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="273" column="8" lean-forward="false" selection-start-line="273" selection-start-column="8" selection-end-line="273" selection-end-column="8" />
+            <state relative-caret-position="624">
+              <caret line="259" column="25" lean-forward="false" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5088#5089#0" expanded="true" />
                 <element signature="e#5124#5125#0" expanded="true" />
-                <element signature="e#9279#9280#0" expanded="true" />
-                <element signature="e#9323#9324#0" expanded="true" />
-                <element signature="e#10306#10307#0" expanded="true" />
-                <element signature="e#10340#10341#0" expanded="true" />
+                <element signature="e#9289#9290#0" expanded="true" />
+                <element signature="e#9333#9334#0" expanded="true" />
+                <element signature="e#10316#10317#0" expanded="true" />
+                <element signature="e#10350#10351#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,8 +39,8 @@
       <file leaf-file-name="Tester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+            <state relative-caret-position="489">
+              <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -403,24 +400,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
+        <state relative-caret-position="489">
+          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SquareSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="273" column="8" lean-forward="false" selection-start-line="273" selection-start-column="8" selection-end-line="273" selection-end-column="8" />
+        <state relative-caret-position="624">
+          <caret line="259" column="25" lean-forward="false" selection-start-line="259" selection-start-column="25" selection-end-line="259" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5088#5089#0" expanded="true" />
             <element signature="e#5124#5125#0" expanded="true" />
-            <element signature="e#9279#9280#0" expanded="true" />
-            <element signature="e#9323#9324#0" expanded="true" />
-            <element signature="e#10306#10307#0" expanded="true" />
-            <element signature="e#10340#10341#0" expanded="true" />
+            <element signature="e#9289#9290#0" expanded="true" />
+            <element signature="e#9333#9334#0" expanded="true" />
+            <element signature="e#10316#10317#0" expanded="true" />
+            <element signature="e#10350#10351#0" expanded="true" />
           </folding>
         </state>
       </provider>

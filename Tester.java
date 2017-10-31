@@ -56,7 +56,17 @@ public class Tester {
         squares.remove(new Square("a5"));
        // System.out.println(squares);
         squares.remove(new Square("a3"));
+        squares.remove(new Square("a8"));
+        squares.remove(new Square("a6"));
+        squares.remove(new Square("a4"));
+        squares.remove(new Square("a5"));
         System.out.println("finally: \n" + squares);
+
+        Collection<String> str = new ArrayList<String>();
+        str.add("hm");
+        str.add("hm");
+        str.add("hm");
+        str.remove(null);
 
 
     }

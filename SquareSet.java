@@ -257,7 +257,7 @@ public class SquareSet<Square> implements Set<Square> {
      */
     public boolean remove(Object o) {
         if (o == null) {
-            throw new NullPointerException();
+            return false;
         }
        /* for (Object x:bArray) {
             if ((o == null ? x == null : o.equals(x)) {
@@ -271,21 +271,21 @@ public class SquareSet<Square> implements Set<Square> {
 
             }
        }*/
-        System.out.println(Arrays.toString(bArray));
+       // System.out.println(Arrays.toString(bArray));
         boolean found = false;
         for (int x = 0; x < numOfElements; x++) {
             if (bArray[x] != null && bArray[x].equals(o)) {
                 found = true;
             }
         }
-        if (found) {
+        if (found && numOfElements >= 1) {
             Object[] copy = new Object[numOfElements];
             for (int i = 0; i < numOfElements; i++) {
                 if (!(bArray[i].equals(o)) && bArray[i] != null) {
                     copy[i] = bArray[i];
                 }
             }
-            System.out.println(Arrays.toString(copy));
+           // System.out.println(Arrays.toString(copy));
             Object[] copy2 = new Object[numOfElements - 1];
             for (int j = 0, y = 0; j < numOfElements; j++) {
                 if (copy[j] != null) {
@@ -295,8 +295,8 @@ public class SquareSet<Square> implements Set<Square> {
                 }
             }
             numOfElements--;
-            System.out.println();
-            System.out.println(Arrays.toString(copy2));
+            //System.out.println();
+            //System.out.println(Arrays.toString(copy2));
             bArray = (Square[]) copy2;
             //System.out.println(Arrays.toString(bArray));
             return true;
