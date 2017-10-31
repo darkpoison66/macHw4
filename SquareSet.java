@@ -17,7 +17,7 @@ import java.util.NoSuchElementException;
 
 public class SquareSet<Square> implements Set<Square> {
 
-    private Square[] bArray;
+    private Square[] array;
     private int numOfElements;
 
 
@@ -25,7 +25,7 @@ public class SquareSet<Square> implements Set<Square> {
      * Creates a SquareSet with an Object array as a backing store.
      */
     public SquareSet() {
-        bArray = (Square[]) new Object[10];
+        array = (Square[]) new Object[10];
         numOfElements = 0;
     }
 
@@ -40,7 +40,7 @@ public class SquareSet<Square> implements Set<Square> {
      * the method.
      */
     public boolean add(Square e) {
-        for (Object x: bArray) {
+        for (Object x: array) {
             if (e.equals(x)) {
                 return false;
             } else if (e == null) {
@@ -57,17 +57,17 @@ public class SquareSet<Square> implements Set<Square> {
             throw new InvalidSquareException(e.toString());
         }
 
-        if (numOfElements == bArray.length) {
-            Square[] copy = (Square[]) new Object[bArray.length * 3];
-            for (int x = 0; x < bArray.length; x++) {
-                copy[x] = bArray[x];
+        if (numOfElements == array.length) {
+            Square[] copy = (Square[]) new Object[array.length * 3];
+            for (int x = 0; x < array.length; x++) {
+                copy[x] = array[x];
             }
             copy[numOfElements] = e;
             numOfElements++;
-            bArray = (Square[]) copy;
+            array = (Square[]) copy;
             return true;
         } else {
-            bArray[numOfElements] = e;
+            array[numOfElements] = e;
             numOfElements++;
             return true;
         }
@@ -139,7 +139,7 @@ public class SquareSet<Square> implements Set<Square> {
         if (o == null) {
             return false;
         }
-        for (Square x: bArray) {
+        for (Square x: array) {
             if (o != null && o.equals(x)) {
                 return true;
             }
@@ -167,7 +167,7 @@ public class SquareSet<Square> implements Set<Square> {
      */
     public int hashCode() {
         int sum = 0;
-        for (Square x:bArray) {
+        for (Square x:array) {
             if (x != null) {
                 sum += x.hashCode();
             }
@@ -219,7 +219,7 @@ public class SquareSet<Square> implements Set<Square> {
     public Object[] toArray() {
         Object[] copy = new Object[numOfElements];
         for (int x = 0; x < numOfElements; x++) {
-            copy[x] = bArray[x];
+            copy[x] = array[x];
         }
         return ((Square[]) copy);
     }
@@ -235,12 +235,12 @@ public class SquareSet<Square> implements Set<Square> {
         if (a.length < numOfElements) {
             Object[] b = new Object[numOfElements];
             for (int x = 0; x < numOfElements; x++) {
-                b[x] = bArray[x];
+                b[x] = array[x];
             }
             return ((T[]) b);
         } else {
             for (int x = 0; x < numOfElements; x++) {
-                a[x] = ((T) bArray[x]);
+                a[x] = ((T) array[x]);
             }
             if (a.length > numOfElements) {
                 a[numOfElements] = null;
@@ -260,7 +260,7 @@ public class SquareSet<Square> implements Set<Square> {
         if (o == null) {
             return false;
         }
-       /* for (Object x:bArray) {
+       /* for (Object x:array) {
             if ((o == null ? x == null : o.equals(x)) {
                 Object store = x;
                 numOfElements--;
@@ -272,18 +272,18 @@ public class SquareSet<Square> implements Set<Square> {
 
             }
        }*/
-       // System.out.println(Arrays.toString(bArray));
+       // System.out.println(Arrays.toString(array));
         boolean found = false;
         for (int x = 0; x < numOfElements; x++) {
-            if (bArray[x] != null && bArray[x].equals(o)) {
+            if (array[x] != null && array[x].equals(o)) {
                 found = true;
             }
         }
         if (found && numOfElements >= 1) {
             Object[] copy = new Object[numOfElements];
             for (int i = 0; i < numOfElements; i++) {
-                if (!(bArray[i].equals(o)) && bArray[i] != null) {
-                    copy[i] = bArray[i];
+                if (!(array[i].equals(o)) && array[i] != null) {
+                    copy[i] = array[i];
                 }
             }
            // System.out.println(Arrays.toString(copy));
@@ -298,8 +298,8 @@ public class SquareSet<Square> implements Set<Square> {
             numOfElements--;
             //System.out.println();
             //System.out.println(Arrays.toString(copy2));
-            bArray = (Square[]) copy2;
-            //System.out.println(Arrays.toString(bArray));
+            array = (Square[]) copy2;
+            //System.out.println(Arrays.toString(array));
             return true;
         } else {
             return false;
@@ -312,9 +312,9 @@ public class SquareSet<Square> implements Set<Square> {
     public String toString() {
         String result = "";
 
-        for (int index = 0; index < bArray.length; index++) {
-            if (bArray[index] != null) {
-                result = result + bArray[index].toString() + "\n";
+        for (int index = 0; index < array.length; index++) {
+            if (array[index] != null) {
+                result = result + array[index].toString() + "\n";
             }
         }
 
@@ -336,11 +336,11 @@ public class SquareSet<Square> implements Set<Square> {
     }
     @Override
     public boolean removeAll(Collection<?> c) {
-
+        return false;
     }
     @Override
     public boolean retainAll(Collection<?> c) {
-
+        return false;
     }
     /**
      * Represents an iterator over a Square collection.
@@ -373,7 +373,7 @@ public class SquareSet<Square> implements Set<Square> {
             if (!hasNext()) {
                 throw new NoSuchElementException();
             }
-            Square next = bArray[cursor];
+            Square next = array[cursor];
             cursor++;
             return next;
         }
