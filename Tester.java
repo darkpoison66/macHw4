@@ -67,6 +67,12 @@ public class Tester {
         str.add("hm");
         str.add("hm");
         str.remove(null);
+        str.contains(null);
+        Collection<String> nulls = new ArrayList<String>();
+        System.out.println(nulls.add(null));
+        //nulls.add(null);
+        System.out.println(str.addAll(nulls));
+
 
 
     }

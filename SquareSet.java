@@ -43,7 +43,7 @@ public class SquareSet<Square> implements Set<Square> {
             if (e.equals(x)) {
                 return false;
             } else if (e == null) {
-                throw new NullPointerException();
+                return false;
             }
         }
         if (e.toString().length() !=  2) {
@@ -82,7 +82,7 @@ public class SquareSet<Square> implements Set<Square> {
     public boolean addAll(Collection<? extends Square> c) {
         for (Square x: c) {
             if (x == null) {
-                throw new NullPointerException();
+                this.add(x);
             }
             if (x.toString().length() !=  2) {
                 throw new InvalidSquareException(x.toString());
