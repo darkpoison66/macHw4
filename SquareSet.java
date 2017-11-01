@@ -22,12 +22,23 @@ public class SquareSet<Square> implements Set<Square> {
 
 
     /**
-     * Creates a SquareSet with an Object array as a backing store.
+     * Creates a default SquareSet with an Object array as a backing store.
      */
     public SquareSet() {
         array = (Square[]) new Object[10];
         numOfElements = 0;
     }
+
+    /**
+     * Creates a new SquareSet with the same elements as its argument c
+     * @param c Collection for which a new SquareSet will created
+     */
+    public SquareSet(Collection<Square> c) {
+        array = (Square[]) new Object[c.size() * 2];
+        numOfElements = 0;
+        this.addAll(c);
+    }
+
 
     @Override
 
@@ -40,15 +51,12 @@ public class SquareSet<Square> implements Set<Square> {
      * the method.
      */
     public boolean add(Square e) {
-        for (Object x: array) {
+        for (Square x: array) {
             if (e.equals(x)) {
                 return false;
             } else if (e == null) {
                 return false;
             }
-        }
-        if (e.toString().length() !=  2) {
-            throw new InvalidSquareException(e.toString());
         }
         char file = e.toString().charAt(0);
         char rank = e.toString().charAt(1);
@@ -58,7 +66,7 @@ public class SquareSet<Square> implements Set<Square> {
         }
 
         if (numOfElements == array.length) {
-            Square[] copy = (Square[]) new Object[array.length * 3];
+            Square[] copy = (Square[]) new Object[array.length + 1];
             for (int x = 0; x < array.length; x++) {
                 copy[x] = array[x];
             }
@@ -81,11 +89,11 @@ public class SquareSet<Square> implements Set<Square> {
      * @return true if this set changed as a result of this call
      */
     public boolean addAll(Collection<? extends Square> c) {
-        for (Square x: c) {
+        for (Square x : c) {
             if (x == null) {
-                this.add(x);
+                throw new NullPointerException();
             }
-            if (x.toString().length() !=  2) {
+            if (x.toString().length() != 2) {
                 throw new InvalidSquareException(x.toString());
             }
             char file = x.toString().charAt(0);
@@ -94,10 +102,13 @@ public class SquareSet<Square> implements Set<Square> {
                 throw new InvalidSquareException(x.toString());
             }
         }
-        for (Square y: c) {
-            this.add(y);
+        boolean found = false;
+        for (Square y : c) {
+            if (this.add(y)) {
+                found = true;
+            }
         }
-        return true;
+            return found;
     }
 
     /**
@@ -349,7 +360,7 @@ public class SquareSet<Square> implements Set<Square> {
      * @author mabdi3
      * @see Square
      */
-    private class SquareIterator implements Iterator<Square> {
+    private class SquareIterator implements Iterator<Square>, Iterable<Square> {
         private int cursor = 0;
 
         /**
@@ -357,6 +368,13 @@ public class SquareSet<Square> implements Set<Square> {
          */
         public SquareIterator() {
             cursor = 0;
+        }
+        /**
+         * @return iterator over the elements in this set
+         * @see SquareIterator
+         */
+        public Iterator<Square> iterator() {
+            return this;
         }
 
        /**
@@ -377,5 +395,6 @@ public class SquareSet<Square> implements Set<Square> {
             cursor++;
             return next;
         }
+
     }
 }
